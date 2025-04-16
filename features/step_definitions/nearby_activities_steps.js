@@ -31,3 +31,13 @@ Given('the following activities exist:', function(dataTable) {
   });
 });
 
+// Step 2: Given the user is located at (latitude, longitude)
+Given('I am at location {float}, {float}', function(latitude, longitude) {
+  userLocation = {latitude, longitude}
+})
+
+When('I search for nearby activities', function() {
+  searchResults = activityFinder.findNearbyActivities(userLocation);
+})
+
+
